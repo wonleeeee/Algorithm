@@ -52,6 +52,8 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize){
 
         // Add to the hash table, if it does not exists
         index = hash(nums[i], numsSize);
+        newNode = malloc(sizeof(info));
+        // newNode = {.num=nums[i], .pos=i, .next=hash_table[index]};
         newNode->num = nums[i];
         newNode->pos = i;
         newNode->next = hash_table[index];
@@ -71,7 +73,7 @@ int main() {
 
     returnArray = twoSum(nums, numsSize, target, &returnSize);
 
-    printf("[2, 7, 11, 15] -> %i, %i", returnArray[0], returnArray[1]);
+    printf("nums : [2, 7, 11, 15],\ntarget : %d -> %i, %i\n", target, returnArray[0], returnArray[1]);
 
     return 0;
 }
