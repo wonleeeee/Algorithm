@@ -3,6 +3,8 @@
 #include <string.h>
 #include <stdint.h>
 
+// https://leetcode.com/problems/two-sum/
+
 typedef struct info {
     int num;
     int pos;
