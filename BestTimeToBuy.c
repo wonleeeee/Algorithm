@@ -4,6 +4,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+// https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+
 int maxProfit(int* prices, int pricesSize) {
     int i, start, end, max, curMax;
 
