@@ -23,6 +23,8 @@ int climbStairs(int n) {
     if (n==2) return 2;
     else if (n==1) return 1;
 
+    int result;
+
     if (doesInit) {
         initialN = n;
         init_hash_table(n);
@@ -38,9 +40,12 @@ int climbStairs(int n) {
 
     if (initialN == n) {
         doesInit = 1;
+        result = nums[n-1] + nums[n-2];
     }
 
-    return (nums[n-1] + nums[n-2]);
+    free(nums);
+
+    return result;
 }
 
 
